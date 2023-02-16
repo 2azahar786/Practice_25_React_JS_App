@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>React</title>
+    <link rel="stylesheet" href="./style.css" class="css">
+    <style>
+        .header{
+            border: 5px solid red;
+            color: green;
+            font-size: x-large;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+    <div class="root">Trying By renderig in javascripts</div>
+   
+
+
+    <script
+      crossorigin
+      src="https://unpkg.com/react@18/umd/react.development.js"
+    ></script>
+
+    <script
+      crossorigin
+      src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"
+    ></script>
+
+    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+
+    <script type="text/babel">
+     const rootElement = document.querySelector(".root")
+     const csss = {backgroundColor : "yellow", color : "red", margin : "5px"};
+     const header = (
+        <header className = "header">
+        <p> Hellow welcome to the new react JS</p>
+        <h1>Hi Friends I'm learning react JS</h1>
+        </header>
+     );
+
+
+     const main =(
+        <main>
+       <p> Lorem, ipsum dolor sit amet consectetur adipisicing elit. Cupiditate, corporis!</p>
+       <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Culpa vitae ducimus obcaecati quo id dolorem.</p>
+        </main>
+     );
+
+     const footer =(
+        <footer >
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Odio, commodi.</p>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ea rem, fugit beatae reiciendis voluptate dicta!</p>
+        </footer>
+        );
+
+
+// To include JSX element / Javascript expression inside another Element we use {}
+     const app = ( 
+        <div>
+        {header} {main} {footer}  {footer} {footer} {footer} {footer}
+    </div>
+    );
+
+
+        ReactDOM.render(app, rootElement);
+    </script>
+</body>
+</html>
